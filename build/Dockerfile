@@ -273,7 +273,7 @@ LABEL org.opencontainers.image.created="${DATE}"
 
 
 ############################################# Build nginx-ingress in golang container #############################################
-FROM golang:1.16-alpine AS builder
+FROM golang:1.17.4-alpine AS builder
 ARG IC_VERSION
 ARG GIT_COMMIT
 ARG DATE
