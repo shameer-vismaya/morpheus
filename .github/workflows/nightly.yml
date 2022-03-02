@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: Output Variables
@@ -62,7 +62,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Determine Go version from go.mod
         run: echo "GO_VERSION=$(grep "go 1." go.mod | cut -d " " -f 2)" >> $GITHUB_ENV
       - name: Setup Golang Environment
@@ -81,7 +81,7 @@ jobs:
         image: [debian, alpine, opentracing, ubi]
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Output Variables
         id: commit
         run: |
@@ -124,7 +124,7 @@ jobs:
         k8s: [1.20.2, 1.19.1, 1.18.8, 1.17.11, 1.16.15]
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Fetch Cached Artifacts
         uses: actions/cache@v2
         with:
@@ -206,7 +206,7 @@ jobs:
       HELM_HTTP_POSTFIX: s
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Fetch Cached Artifacts
         uses: actions/cache@v2
         with:
