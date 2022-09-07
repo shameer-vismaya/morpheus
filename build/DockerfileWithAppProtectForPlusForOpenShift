@@ -122,7 +122,7 @@ FROM base AS local
 COPY nginx-ingress /
 
 
-FROM golang:1.16-alpine AS builder
+FROM golang:1.19.1-alpine AS builder
 ARG IC_VERSION
 ARG GIT_COMMIT
 ARG DATE
