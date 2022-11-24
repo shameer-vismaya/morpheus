@@ -1,4 +1,4 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
 
 ARG GCLOUD_VERSION=338.0.0
 
