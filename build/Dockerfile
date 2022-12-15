@@ -3,7 +3,7 @@ ARG BUILD_OS=debian
 ARG NGINX_PLUS_VERSION=r24
 
 ############################################# Base image for Debian #############################################
-FROM nginx:1.21.0 AS debian
+FROM nginx:1.23.3 AS debian
 
 RUN apt-get update \
 	&& apt-get install --no-install-recommends --no-install-suggests -y libcap2-bin \
